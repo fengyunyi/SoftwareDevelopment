@@ -54,3 +54,33 @@ Delete a local branch set to track a remote branch
 ```
 git branch -d -r origin/<remote branch name>
 ```
+
+
+## CD (Continuos Deployment)
+
+Software features are delivered frequently through **automated** deployments - no manual review and deployment, reduced overhead.
+
+**How to build a CD pipeline?**
+
+1. Tests: Stop bugs from entering production stages
+* Unit tests
+* Integration tests
+* Web UI tests
+* Headless browser testing (headless: no GUI)
+* End-to-end test: set up requests/data generator(s)
+* Backward compatibility tests - e.g. via PostProd stage
+* Gamma testing
+  * Chaos testing (failure injection framework e.g. Apache Ozone)
+  * Dependency connection test
+
+2. Limit blast radius
+* Fail fast v.s. fail slow
+* Real time Monitors/Alarms (consider using % threshold)
+* Auto-cut
+* Deployment blockers: e.g. Time window blocker - avoid deploy in low traffic time to fail fast
+* Port scan
+* Deployment configuration
+
+3. Mindset: CD needs continuous maintenance! Effort spent on avoid creating bugs -> create better ways to catch bugs
+* Write GOOD and MORE tests - higher coverage
+* Fine tune alarms
