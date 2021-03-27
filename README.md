@@ -55,6 +55,11 @@ Delete a local branch set to track a remote branch
 git branch -d -r origin/<remote branch name>
 ```
 
+Push a local branch to remote (create new remote branch with the specified name)
+```
+git push origin local_branch_name:remote_branch_name
+```
+
 
 ## CD (Continuos Deployment)
 
