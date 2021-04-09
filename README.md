@@ -86,6 +86,13 @@ Software features are delivered frequently through **automated** deployments - n
 * Port scan
 * Deployment configuration
 
-3. Mindset: CD needs continuous maintenance! Effort spent on avoid creating bugs -> create better ways to catch bugs
+3. Mindset: CD needs continuous improvement and maintenance! Effort spent on avoid creating bugs -> create better ways to catch bugs
 * Write GOOD and MORE tests - higher coverage
 * Fine tune alarms
+* Deploy more often
+* Assume rollbacks will happen
+
+**Commom pitfalls**
+* Alarm missing data - configure your alarms such that missing data is treated as alarm state
+* Queue based incomming traffic - load balancer usually has health check on hosts but for those services that takes only requests from queues, have mechanisms detect host health
+* 
