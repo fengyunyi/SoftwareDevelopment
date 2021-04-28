@@ -14,7 +14,7 @@ git adog
 ```
 
 Squash several sequencial commits into one to keep clean history
-1. "undo" the commits till commit_id (the last commit you want to keep) -> all the changes after will gointo staging area as if just did git add
+1. "undo" the commits till commit_id (the last commit you want to keep) -> all the changes after will go into staging area as if just did git add
 ```
 git reset --soft [commit_id] 
 ```
@@ -95,4 +95,8 @@ Software features are delivered frequently through **automated** deployments - n
 **Commom pitfalls**
 * Alarm missing data - configure your alarms such that missing data is treated as alarm state
 * Queue based incomming traffic - load balancer usually has health check on hosts but for those services that takes only requests from queues, have mechanisms detect host health
-* 
+
+
+## AWS
+**IAM Roles vs. Users**
+These are two fundamental types of "principals" (a.k.a. identities) that customers can use. The primary difference is that the credentials for Users are supposed to be long lived - do not expired automatically, and must be manually rotated (either by a human or another system) every 90 days for example. However, the credentials for Roles expire at a specific point in time.
